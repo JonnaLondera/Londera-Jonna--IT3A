@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sun Son Solar - Registration</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #f5f5f5;
+}
+
+.container {
+min-height: 100vh;
+display: flex;
+}
+
+.form-section {
+width: 50%;
+padding: 50px 80px;
+background: white;
+}
+
+.logo {
+text-align: center;
+margin-bottom: 35px;
+}
+
+.logo h2 {
+color: #1d2733;
+font-size: 24px;
+}
+
+.logo p {
+color: #e5a900;
+font-size: 10px;
+letter-spacing: 4px;
+}
+
+h1 {
+font-size: 26px;
+color: #1d2733;
+margin-bottom: 8px;
+}
+
+.description {
+color: #777;
+font-size: 13px;
+margin-bottom: 25px;
+}
+
+.row {
+display: flex;
+gap: 15px;
+}
+
+.field {
+width: 100%;
+margin-bottom: 15px;
+}
+
+label {
+display: block;
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 6px;
+color: #333;
+}
+
+input {
+width: 100%;
+height: 43px;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 6px;
+outline: none;
+}
+
+input:focus {
+border-color: #e5a900;
+}
+
+.terms {
+display: flex;
+align-items: center;
+gap: 7px;
+margin: 10px 0 18px;
+font-size: 11px;
+color: #666;
+}
+
+.terms input {
+width: auto;
+height: auto;
+}
+
+.terms a {
+color: #d99f00;
+text-decoration: none;
+}
+
+.register-button {
+width: 100%;
+height: 44px;
+border: none;
+border-radius: 6px;
+background: #eeb000;
+color: white;
+font-weight: bold;
+cursor: pointer;
+}
+
+.register-button:hover {
+background: #d99d00;
+}
+
+.login {
+text-align: center;
+margin-top: 18px;
+font-size: 11px;
+color: #777;
+}
+
+.login a {
+color: #d99f00;
+text-decoration: none;
+font-weight: bold;
+}
+
+.design-section {
+width: 50%;
+min-height: 100vh;
+background: linear-gradient(
+135deg,
+#f6c343,
+#e7a900,
+#9d6f00
+);
+position: relative;
+overflow: hidden;
+}
+
+.sun {
+width: 180px;
+height: 180px;
+background: #ffe27a;
+border-radius: 50%;
+position: absolute;
+top: 15%;
+right: 20%;
+}
+
+.panel {
+width: 350px;
+height: 210px;
+background: #26384b;
+border: 10px solid #172432;
+position: absolute;
+top: 45%;
+left: 15%;
+transform: rotate(-10deg);
+box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.panel:before {
+content: "";
+position: absolute;
+inset: 0;
+background:
+linear-gradient(
+90deg,
+transparent 24%,
+#587083 25%,
+#587083 26%,
+transparent 27%,
+transparent 49%,
+#587083 50%,
+#587083 51%,
+transparent 52%,
+transparent 74%,
+#587083 75%,
+#587083 76%,
+transparent 77%
+),
+linear-gradient(
+0deg,
+transparent 24%,
+#587083 25%,
+#587083 26%,
+transparent 27%,
+transparent 49%,
+#587083 50%,
+#587083 51%,
+transparent 52%,
+transparent 74%,
+#587083 75%,
+#587083 76%,
+transparent 77%
+);
+}
+
+.cards {
+position: absolute;
+right: 50px;
+bottom: 70px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.card {
+width: 190px;
+background: white;
+padding: 15px;
+border-radius: 8px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+color: #1d2733;
+font-size: 20px;
+}
+
+.card p {
+color: #777;
+font-size: 9px;
+margin-top: 4px;
+}
+
+@media (max-width: 800px) {
+.container {
+display: block;
+}
+
+.form-section {
+width: 100%;
+padding: 40px 25px;
+}
+
+.design-section {
+display: none;
+}
+}
+
+@media (max-width: 500px) {
+.row {
+display: block;
+}
+
+h1 {
+font-size: 23px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="form-section">
+
+<div class="logo">
+<h2>SUN SON</h2>
+<p>SOLAR</p>
+</div>
+
+<h1>Create an Account</h1>
+
+<p class="description">
+Join Sun Son Solar today
+</p>
+
+<form id="registrationForm">
+
+<div class="row">
+
+<div class="field">
+<label>First Name</label>
+<input type="text" placeholder="First Name" required>
+</div>
+
+<div class="field">
+<label>Last Name</label>
+<input type="text" placeholder="Last Name" required>
+</div>
+
+</div>
+
+<div class="field">
+<label>Email Address</label>
+<input type="email" placeholder="Email Address" required>
+</div>
+
+<div class="field">
+<label>Phone Number</label>
+<input type="text" placeholder="Phone Number" required>
+</div>
+
+<div class="field">
+<label>Address</label>
+<input type="text" placeholder="Address" required>
+</div>
+
+<div class="field">
+<label>Password</label>
+<input type="password" id="password" placeholder="Password" required>
+</div>
+
+<div class="field">
+<label>Confirm Password</label>
+<input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+</div>
+
+<div class="terms">
+<input type="checkbox" required>
+<span>
+I agree to the
+<a href="#">Terms and Conditions</a>
+</span>
+</div>
+
+<button type="submit" class="register-button">
+REGISTER
+</button>
+
+</form>
+
+<p class="login">
+Already have an account?
+<a href="#">Login here</a>
+</p>
+
+</div>
+
+<div class="design-section">
+
+<div class="sun"></div>
+
+<div class="panel"></div>
+
+<div class="cards">
+
+<div class="card">
+<h3>500+</h3>
+<p>Projects Completed</p>
+</div>
+
+<div class="card">
+<h3>1000+</h3>
+<p>Happy Customers</p>
+</div>
+
+<div class="card">
+<h3>98%</h3>
+<p>Customer Satisfaction</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(event) {
+
+event.preventDefault();
+
+let password = document.getElementById("password").value;
+let confirmPassword = document.getElementById("confirmPassword").value;
+
+if (password !== confirmPassword) {
+alert("Passwords do not match.");
+return;
+}
+
+alert("Registration successful!");
+
+});
+</script>
+
+</body>
+</html>
